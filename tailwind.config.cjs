@@ -8,14 +8,12 @@ module.exports = {
     "./src/**/*.{ts,tsx,astro}",
   ],
   theme: {
-    container: {
-      center: true,
-      padding: "2rem",
-      screens: {
-        "2xl": "1400px",
-      },
-    },
     extend: {
+      screens: {
+        mobile: "375px",
+        tablet: "768px",
+        desktop: "1440px",
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

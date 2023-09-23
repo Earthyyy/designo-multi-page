@@ -145,6 +145,13 @@ select {
 
 @layer components {
 
+  /* CONTAINER */
+
+  .wrapper {
+    @apply mx-auto w-full tablet:px-10 desktop:max-w-[69.375rem];
+    
+  }
+
   /* HEADINGS */
 
   .heading-lg {
