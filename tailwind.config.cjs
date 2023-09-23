@@ -25,10 +25,16 @@ module.exports = {
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
+          peach: "hsl(var(--primary-peach))",
+          black: "hsl(var(--primary-black))",
+          white: "hsl(var(--primary-white))",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",
+          lightPeach: "hsl(var(--secondary-light-peach))",
+          darkGrey: "hsl(var(--secondary-dark-grey))",
+          lightGrey: "hsl(var(--secondary-light-grey))",
         },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",

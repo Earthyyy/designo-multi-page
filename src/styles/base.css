@@ -73,9 +73,16 @@ select {
  
     --primary: 222.2 47.4% 11.2%;
     --primary-foreground: 210 40% 98%;
+    --primary-peach: 11 73% 66%;
+    --primary-black: 270 3% 11%;
+    --primary-white: 0 0% 100%;
+
  
     --secondary: 210 40% 96.1%;
     --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary-light-peach: 11 100% 80% ;
+    --secondary-dark-grey: 264 5% 20%;
+    --secondary-light-grey: 210 17% 95%;
  
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
