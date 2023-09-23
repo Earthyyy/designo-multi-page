@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -26,6 +28,7 @@
 html,
 body {
     min-height: 100vh;
+    font-family: 'Jost', sans-serif;
 }
 
 /*
@@ -137,5 +140,28 @@ select {
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+
+  /* HEADINGS */
+
+  .heading-lg {
+    @apply text-[3rem]/[3rem] font-medium;
+  }
+
+  .heading-md {
+    @apply text-4xl/[3rem] font-medium tracking-[.125rem];
+  }
+
+  .heading-sm {
+    @apply text-xl/[1.75rem] font-medium tracking-[0.3125rem];
+  }
+
+  /* BODY */
+
+  .body-base {
+    @apply text-base font-normal;
   }
 }
