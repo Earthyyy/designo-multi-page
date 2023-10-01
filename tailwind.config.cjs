@@ -12,7 +12,7 @@ module.exports = {
       screens: {
         mobile: "375px",
         tablet: "768px",
-        desktop: "1440px",
+        desktop: "1110px",
       },
       colors: {
         border: "hsl(var(--border))",
