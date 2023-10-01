@@ -169,7 +169,7 @@ select {
   /* BODY */
 
   .body-base {
-    @apply text-base font-normal;
+    @apply text-base/[1.625rem] font-normal;
   }
 
   .link {
