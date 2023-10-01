@@ -1,0 +1,24 @@
+---
+import { Button } from "./ui/button";
+import { Image } from "astro:assets";
+import HeroPhone from "@/assets/hero-phone.png"
+import DesktopHeroPhone from "@/assets/home/desktop/image-hero-phone.png"
+
+---
+
+
+<section class="bg-primary-peach flex  flex-col desktop:flex-row  gap-20 px-6 tablet:px-36 tablet:rounded-[1rem] mb-[7.5rem] desktop:mb-40">
+    <div class="pt-20 text-center grid gap-[0.875rem] tablet:gap-6">
+        <h1 class="heading-lg text-primary-white">Award-winning custom designs and digital branding solutions</h1>
+        <div class="flex flex-col gap-6 items-center">
+            <p class="text-[15px]/[25px] tablet:body-base text-white">With over 10 years in the industry, we are experienced in creating fully responsive websites, apps, and engaging brand experiences. Find out more about our services.</p>
+            <Button variant={"dark"}>learn more</Button>
+        </div>
+    </div>
+    <figure class="flex justify-center">
+        <Image src={HeroPhone}
+        class={"object-cover w-[284px] h-[582px]"}
+        alt="hero phone" class="object-contain desktop:hidden" />
+        <!-- <Image src={DesktopHeroPhone} alt={"hero phone"} class="hidden desktop:block" class="object-cover" /> -->
+    </figure>
+</section>

@@ -2,12 +2,14 @@
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 import { Button } from "@/components/ui/button"
+import HomeHero from '@/components/HomeHero.astro';
+import HomeFeatures from '@/components/HomeFeatures.astro';
 ---
 
 <Layout title="Welcome to Astro.">
 	<main class="wrapper">
-		<h1 class="text-secondary-lightPeach ">Hello, World</h1>
-		<Button variant={"dark"}>Learn more</Button>
+		<HomeHero/>
+		<HomeFeatures/>
 
 	</main>
 </Layout>
