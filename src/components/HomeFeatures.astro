@@ -5,7 +5,11 @@ import FeatureCard from "./FeatureCard.astro";
 ---
 
 
-<section class="px-6 tablet:px-0 grid gap-6 desktop:grid-cols-2">
+<section class="px-6 tablet:px-0 grid gap-6 desktop:grid-cols-2 relative">
+
+    <svg class="hidden xdesktop:block xdesktop:absolute inset-0  z-[-2] translate-y-[-33rem] translate-x-[-225px]" width="1006" height="594" xmlns="http://www.w3.org/2000/svg"><path d="M297 0h412c164.029 0 297 132.971 297 297S873.029 594 709 594H0V297C0 132.971 132.971 0 297 0z" fill="#F1F3F5" fill-rule="evenodd" opacity=".502"/></svg>
+
+
     <FeatureCard id="web-design" title="web design"/>
     <FeatureCard id="app-design" title="app design"/>
     <FeatureCard id="graphic-design" title="graphic design"/>

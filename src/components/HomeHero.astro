@@ -7,18 +7,24 @@ import DesktopHeroPhone from "@/assets/home/desktop/image-hero-phone.png"
 ---
 
 
-<section class="bg-primary-peach flex  flex-col desktop:flex-row  gap-20 px-6 tablet:px-36 tablet:rounded-[1rem] mb-[7.5rem] desktop:mb-40">
-    <div class="pt-20 text-center grid gap-[0.875rem] tablet:gap-6">
+<section class="bg-primary-peach flex  flex-col desktop:flex-row  gap-20 px-6 tablet:px-36 tablet:rounded-[1rem] mb-[7.5rem] desktop:mb-40 desktop:px-24 w-full relative overflow-hidden">
+
+    
+
+
+    <svg class="bgPatternHero | absolute top-[6.375rem] right-0 tablet:right-[-10%] desktop:top-0 desktop:right-0  z-0" width="640" height="639" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient x1="0%" y1="50%" x2="100%" y2="50%" id="a"><stop stop-color="#5D0202" stop-opacity="0" offset="0%"/><stop stop-color="#5D0202" stop-opacity=".498" offset="100%"/></linearGradient></defs><circle fill="url(#a)" transform="matrix(0 -1 -1 0 640 640)" cx="320" cy="320" r="320" fill-rule="evenodd" opacity=".309"/></svg>
+
+    <div class="pt-20 desktop:py-36 text-center grid gap-[0.875rem] tablet:gap-6 desktop:text-left desktop:w-[30rem] z-[1]">
         <h1 class="heading-lg text-primary-white">Award-winning custom designs and digital branding solutions</h1>
-        <div class="flex flex-col gap-6 items-center">
+        <div class="flex flex-col gap-6 items-center desktop:items-start">
             <p class="text-[15px]/[25px] tablet:body-base text-white">With over 10 years in the industry, we are experienced in creating fully responsive websites, apps, and engaging brand experiences. Find out more about our services.</p>
             <Button variant={"dark"}>learn more</Button>
         </div>
     </div>
-    <figure class="flex justify-center">
+    <figure class="heroPhoneIllustration | flex justify-center">
         <Image src={HeroPhone}
         class={"object-cover w-[284px] h-[582px]"}
         alt="hero phone" class="object-contain desktop:hidden" />
-        <!-- <Image src={DesktopHeroPhone} alt={"hero phone"} class="hidden desktop:block" class="object-cover" /> -->
+        <Image src={DesktopHeroPhone} alt={"hero phone"} class="hidden desktop:block desktop:absolute -right-24 -top-14" />
     </figure>
 </section>
