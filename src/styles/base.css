@@ -175,4 +175,8 @@ select {
   .link {
     @apply text-[0.9375rem] font-medium tracking-[5px]
   }
+
+  .footer-link {
+    @apply text-[0.875rem]/[0.875rem] font-normal tracking-[2px] uppercase
+  }
 }
