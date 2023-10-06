@@ -1,0 +1,49 @@
+---
+import DesignHeader from "@/components/DesignHeader.astro";
+import ProjectCard from "@/components/ProjectCard.astro";
+import ProjectSection from "@/components/ProjectSection.astro";
+import SkillLinks from "@/components/SkillLinks.astro";
+import Layout from "@/layouts/Layout.astro";
+
+import Airfilter from "@/assets/app-design/desktop/image-airfilter.jpg";
+import Eyecam from "@/assets/app-design/desktop/image-eyecam.jpg";
+import Faceit from "@/assets/app-design/desktop/image-faceit.jpg";
+import Loopstudios from "@/assets/app-design/desktop/image-loopstudios.jpg";
+import Todo from "@/assets/app-design/desktop/image-todo.jpg";
+
+
+---
+
+<Layout title="App Design">
+	<main class="wrapper">
+		<DesignHeader title='Web Design'>
+			We build websites that serve as powerful marketing tools and bring memorable brand experiences.
+		</DesignHeader>
+		<ProjectSection>
+
+            <ProjectCard title="airfilter" image={Airfilter}>
+                Solving the problem of poor indoor air quality by filtering the air
+            </ProjectCard>
+
+            <ProjectCard title="eyecam" image={Eyecam}>
+                Product that lets you edit your favorite photos and videos at any time
+            </ProjectCard>
+
+            <ProjectCard title="faceit" image={Faceit}>
+                Get to meet your favorite internet superstar with the faceit app
+            </ProjectCard>
+
+            <ProjectCard title="todo" image={Todo}>
+                A todo app that features cloud sync with light and dark mode
+            </ProjectCard>
+
+            <ProjectCard title="loopstudios" image={Loopstudios}>
+                A VR experience app made for Loopstudios
+            </ProjectCard>
+		</ProjectSection>
+		<SkillLinks skills={[
+			"web-design",
+			"graphic-design"
+		]}/>
+	</main>
+</Layout>

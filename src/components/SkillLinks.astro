@@ -1,0 +1,23 @@
+---
+import FeatureCard from "./FeatureCard.astro";
+
+type Skill = "app-design" | "graphic-design" | "web-design";
+
+interface Props {
+    skills: Skill[];
+}
+
+
+const {skills} = Astro.props;
+---
+
+
+<section class="px-6 tablet:px-0 grid gap-6 desktop:grid-cols-2 relative pb-24 tablet:pb-[7.5rem] desktop:pb-40">
+
+
+
+    {skills.map((skill) => (
+        <FeatureCard id={skill} title={skill} />
+    ))}
+
+</section>
