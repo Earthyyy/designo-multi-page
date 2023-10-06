@@ -1,12 +1,19 @@
 ---
+import { Image } from 'astro:assets';
 interface Props {
 	title: string;
 }
 
 const { title } = Astro.props;
+
+
 ---
 
-<section class="bg-primary-peach flex  flex-col gap-6 justify-center items-center h-[20rem]  px-6 tablet:px-36 tablet:h-[15.75rem] tablet:rounded-[1rem] desktop:px-24 w-full relative overflow-hidden">
-    <h1 class="heading-lg text-primary-white">{title}</h1>
-    <p class="text-center text-[15px]/[25px] tablet:body-base text-white max-w-[24rem]"><slot/></p>
+<section class={"bg-primary-peach flex  flex-col gap-6 justify-center items-center h-[20rem]  px-6 tablet:px-36 tablet:h-[15.75rem] tablet:rounded-[1rem] desktop:px-24 w-full  relative overflow-hidden"}>
+        <svg class="overflow-visible absolute right-[31.25rem] top-0 z-0 tablet:right-2 tablet:-top-[60%]" width="876" height="584" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient x1="0%" y1="50%" x2="100%" y2="50%" id="a"><stop stop-color="#5D0202" stop-opacity="0" offset="0%"/><stop stop-color="#5D0202" stop-opacity=".498" offset="100%"/></linearGradient></defs><g transform="matrix(1 0 0 -1 0 584)" fill="url(#a)" fill-rule="evenodd" opacity=".309"><circle transform="matrix(0 -1 -1 0 1168 1168)" cx="730" cy="438" r="146"/><circle transform="matrix(-1 0 0 1 876 0)" cx="438" cy="438" r="146"/><circle transform="matrix(0 1 1 0 -292 292)" cx="146" cy="438" r="146"/><circle transform="matrix(0 -1 -1 0 876 876)" cx="730" cy="146" r="146"/><circle transform="matrix(-1 0 0 1 876 0)" cx="438" cy="146" r="146"/></g></svg>
+
+
+
+    <h1 class="heading-lg text-primary-white z-[1]">{title}</h1>
+    <p class="text-center text-[15px]/[25px] z-[1] tablet:body-base text-white max-w-[24rem]"><slot/></p>
 </section>
