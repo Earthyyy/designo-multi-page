@@ -6,7 +6,7 @@ interface Props {
 const { title } = Astro.props;
 ---
 
-<section class="bg-primary-peach flex  flex-col gap-6 justify-center items-center h-[20rem]  px-6 tablet:px-36 tablet:h-[15.75rem] tablet:rounded-[1rem] mb-[7.5rem] desktop:mb-40 desktop:px-24 w-full relative overflow-hidden">
+<section class="bg-primary-peach flex  flex-col gap-6 justify-center items-center h-[20rem]  px-6 tablet:px-36 tablet:h-[15.75rem] tablet:rounded-[1rem] desktop:px-24 w-full relative overflow-hidden">
     <h1 class="heading-lg text-primary-white">{title}</h1>
     <p class="text-center text-[15px]/[25px] tablet:body-base text-white max-w-[24rem]"><slot/></p>
 </section>
