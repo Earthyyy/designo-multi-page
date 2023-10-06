@@ -17,17 +17,17 @@ const bgMap = {
 ---
 
 
-<div id={id} class={cn(`relative h-[250px] tablet:h-[200px] desktop:min-h-[308px] w-full rounded-2xl overflow-hidden flex flex-col justify-center items-center gap-3 cursor-pointer group bg-no-repeat bg-cover ${bgMap[id]}`, 
+<a href={id} id={id} class={cn(`relative h-[250px] tablet:h-[200px] desktop:min-h-[308px] w-full rounded-2xl overflow-hidden flex flex-col justify-center items-center gap-3 cursor-pointer group bg-no-repeat bg-cover ${bgMap[id]}`, 
     variant === "span" && "desktop:row-span-2 desktop:h-auto"
     
 )}>
     <div class="group-hover:bg-primary-peach/80 transition-colors layer absolute inset-0 bg-primary-black/50"></div>
     
     <h3 class="heading-md uppercase text-primary-white z-[3]">{title}</h3>
-    <a href="#" class="link uppercase text-primary-white z-[3] flex items-center justify-center">view projects
+    <span  class="link uppercase text-primary-white z-[3] flex items-center justify-center">view projects
 
 
         <svg width="7" height="10" xmlns="http://www.w3.org/2000/svg" class="ml-4"><path d="M1 1l4 4-4 4" stroke="#E7816B" stroke-width="2" fill="none"  fill-rule="evenodd"/></svg>
-    </a>
+    </span>
     
-</div>
+</>
