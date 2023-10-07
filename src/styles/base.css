@@ -148,7 +148,7 @@ select {
   /* CONTAINER */
 
   .wrapper {
-    @apply mx-auto w-full tablet:px-10 desktop:max-w-[69.375rem];
+    @apply mx-auto w-full tablet:px-10 desktop:max-w-[69.375rem] desktop:px-0;
     
   }
 
