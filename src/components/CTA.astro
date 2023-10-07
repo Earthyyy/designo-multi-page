@@ -1,5 +1,6 @@
 ---
-import { Button } from "./ui/button";
+import { cn } from "@/lib/utils";
+import { Button, buttonVariants } from "./ui/button";
 
 ---
 
@@ -11,7 +12,9 @@ import { Button } from "./ui/button";
             <p class="body-base text-primary-white">Ready to take it to the next level? Contact us today and find out how our expertise can help your business grow.</p>
         </div>
     
-        <Button variant={"dark"}>get in touch</Button>
+        <a href="contact" class={cn(buttonVariants({
+            variant: "dark"
+        }))}>get in touch</a>
     </div>
 
 

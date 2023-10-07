@@ -1,8 +1,9 @@
 ---
-import { Button } from "./ui/button";
+import { Button, buttonVariants } from "./ui/button";
 import { Image } from "astro:assets";
 import HeroPhone from "@/assets/hero-phone.png"
 import DesktopHeroPhone from "@/assets/home/desktop/image-hero-phone.png"
+import { cn } from "@/lib/utils";
 
 ---
 
@@ -18,7 +19,9 @@ import DesktopHeroPhone from "@/assets/home/desktop/image-hero-phone.png"
         <h1 class="heading-lg text-primary-white">Award-winning custom designs and digital branding solutions</h1>
         <div class="flex flex-col gap-6 items-center desktop:items-start">
             <p class="text-[15px]/[25px] tablet:body-base text-white">With over 10 years in the industry, we are experienced in creating fully responsive websites, apps, and engaging brand experiences. Find out more about our services.</p>
-            <Button variant={"dark"}>learn more</Button>
+            <a href="about" class={cn(buttonVariants({
+                variant: "dark"
+            }))}>learn more</a>
         </div>
     </div>
     <figure class="heroPhoneIllustration | flex justify-center">
