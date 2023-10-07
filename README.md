@@ -44,8 +44,8 @@ Users should be able to:
 
 ### Links
 
-- [Designo Solution URL](https://your-solution-url.com)
-- [Designo Live Site URL](https://your-live-site-url.com)
+- [Designo Solution URL](https://github.com/Earthyyy/designo-multi-page/)
+- [Designo Live Site URL](https://earthyyy-designo-multi-page.netlify.app/)
 
 ## My process
 
