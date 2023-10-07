@@ -1,0 +1,55 @@
+---
+import MapCard from "@/components/MapCard.astro";
+import Layout from "@/layouts/Layout.astro";
+
+import AustraliaMap from "@/assets/locations/desktop/image-map-australia.png";
+import CanadaMap from "@/assets/locations/desktop/image-map-canada.png";
+import UnitedKingdomMap from "@/assets/locations/desktop/image-map-united-kingdom.png";
+import AustraliaMapTablet from "@/assets/locations/tablet/image-map-australia.png";
+import CanadaMapTablet from "@/assets/locations/tablet/image-map-canada.png";
+import UnitedKingdomMapTablet from "@/assets/locations/tablet/image-map-uk.png";
+
+---
+
+
+<Layout title="Locations">
+	<main class="wrapper grid gap-10 mb-[7.5rem] tablet:gap-[7.5rem] desktop:gap-8">
+		<MapCard image={CanadaMap} imageAlt={CanadaMapTablet} title="Canada">
+			<li class="grid body-base" slot="first-address">
+				<span class="font-medium">Designo Central Office</span>
+				<span>3886 Wellington Street</span>
+				<span>Toronto, Ontario M9C 3J5</span>
+			</li>
+			<li class="grid body-base" slot="second-address">
+				<span class="font-medium">Contact Us (Central Office)</span>
+				<span>P : +1 253-863-8967</span>
+				<span>M : contact@designo.co</span>
+			</li>
+		</MapCard>
+		<MapCard image={AustraliaMap} imageAlt={AustraliaMapTablet} title="Australia" reverse={true}>
+			<li class="grid body-base" slot="first-address">
+				<span class="font-medium">Designo AU Office</span>
+				<span>19 Balonne Street</span>
+				<span>New South Wales 2443</span>
+			</li>
+			<li class="grid body-base" slot="second-address">
+				<span class="font-medium">Contact</span>
+				<span>P : (02) 6720 9092</span>
+				<span>M : contact@designo.au</span>
+			</li>
+		</MapCard>
+
+		<MapCard image={UnitedKingdomMap} imageAlt={UnitedKingdomMapTablet} title="United Kingdom">
+			<li class="grid body-base" slot="first-address">
+				<span class="font-medium">Designo UK Office</span>
+				<span>13  Colorado Way</span>
+				<span>Rhyd-y-fro SA8 9GA</span>
+			</li>
+			<li class="grid body-base" slot="second-address">
+				<span class="font-medium">Contact</span>
+				<span>P : 078 3115 1400</span>
+				<span>M : contact@designo.uk</span>
+			</li>
+		</MapCard>
+	</main>
+</Layout>

@@ -1,0 +1,40 @@
+---
+import { Image } from "astro:assets";
+import CanadaMap from "@/assets/locations/desktop/image-map-canada.png";
+import { cn } from "@/lib/utils";
+
+interface Props {
+    image: ImageMetadata;
+    imageAlt: ImageMetadata;
+    title: string;
+    reverse?: boolean;
+}
+
+const {image, imageAlt, title, reverse} = Astro.props;
+---
+
+
+<div class="tablet:grid tablet:gap-8 desktop:grid desktop:grid-cols-3">
+    <Image
+        src={image}
+        alt={title}
+        class="w-full tablet:hidden desktop:block desktop:h-full object-cover desktop:rounded-2xl"
+    />
+
+    <Image
+        src={imageAlt}
+        alt={title}
+        class="w-full hidden tablet:block desktop:hidden rounded-2xl"
+    />
+
+
+    <div class={cn("w-full min-h-[24.625rem] tablet:min-h-[20.375rem] rounded-2xl bg-[#FDF3F0] flex flex-col justify-center items-center tablet:items-start tablet:px-[4.6875rem]  gap-6 desktop:col-span-2",
+        reverse && "desktop:col-start-1 desktop:row-start-1"
+    )}>
+        <h2 class="heading-lg text-primary-peach">{title}</h2>
+        <ul class="text-center grid tablet:flex tablet:gap-24 tablet:text-left">
+                <slot name="first-address"/>
+                <slot name="second-address"/>
+        </ul>
+    </div>
+</div>
