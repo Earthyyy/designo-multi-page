@@ -1,6 +1,6 @@
 ---
 import {Image}  from "astro:assets";
-import Form from "./Form.astro";
+import Form from "./Form.tsx";
 import IPatternDesktop from "@/assets/contact/desktop/bg-pattern-hero-desktop.svg"
 
 import IPatternMobile from "@/assets/contact/mobile/bg-pattern-hero-contact-mobile.svg"
@@ -19,7 +19,6 @@ import IPatternMobile from "@/assets/contact/mobile/bg-pattern-hero-contact-mobi
         alt="pattern"
     />
 
-    <!-- <svg class="hidden tablet:block overflow-visible absolute z-[-1]" width="640" height="640" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient x1="0%" y1="50%" x2="100%" y2="50%" id="a"><stop stop-color="#5D0202" stop-opacity="0" offset="0%"/><stop stop-color="#5D0202" stop-opacity=".498" offset="100%"/></linearGradient></defs><circle fill="url(#a)" transform="matrix(0 1 1 0 0 0)" cx="320" cy="320" r="320" fill-rule="evenodd" opacity=".309"/></svg> -->
 
 <div class="flex flex-col items-center gap-6 tablet:gap-8 tablet:items-start desktop:max-w-[27.875rem]">
 
@@ -29,5 +28,5 @@ import IPatternMobile from "@/assets/contact/mobile/bg-pattern-hero-contact-mobi
 </div>
 
 
-<Form/>
-</section>
+<Form client:only="react"/>
+</section>./Form.tsx
