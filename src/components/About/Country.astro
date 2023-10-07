@@ -1,0 +1,49 @@
+---
+import { Image } from "astro:assets";
+
+
+import IAustralia from "@/assets/shared/desktop/illustration-australia.svg";
+import ICanada from "@/assets/shared/desktop/illustration-canada.svg";
+import IUnitedKingdom from "@/assets/shared/desktop/illustration-united-kingdom.svg";
+const {heading, variant} = Astro.props as {heading: "canada" | "australia" | "united kingdom", 
+variant: "primary" | "secondary" | "tertiary"};
+
+
+
+import { Button } from "@/components/ui/button";
+
+const titleToIllustration = {
+    "australia": IAustralia,
+    "canada": ICanada,
+    "united kingdom": IUnitedKingdom
+}
+
+const variantMap = {
+    "primary": "",
+    "secondary": "-rotate-90",
+    "tertiary": "rotate-90"
+}
+---
+
+
+
+<div class="flex flex-col items-center text-center  desktop:flex desktop:flex-col gap-12 tablet:text-left desktop:text-center">
+
+
+        <div class="relative">
+
+            <svg class={`absolute inset-0 z-[-1] ${variantMap[variant]}`} xmlns="http://www.w3.org/2000/svg" width="202" height="202"><defs><linearGradient id="a" x1="0%" x2="100%" y1="50%" y2="50%"><stop offset="0%" stop-color="#5D0202" stop-opacity="0"/><stop offset="100%" stop-color="#5D0202" stop-opacity=".498"/></linearGradient></defs><circle cx="101" cy="101" r="101" fill="url(#a)" fill-rule="evenodd" opacity=".203" transform="matrix(-1 0 0 1 202 0)"/></svg>
+
+
+            <Image
+                src={titleToIllustration[heading]}
+                alt="illustration passionate"
+            />
+        </div>
+    
+
+    <div class="flex flex-col items-center gap-8">
+        <h4 class="heading-sm uppercase">{heading}</h4>
+        <Button variant={"light"}>see location</Button>
+    </div>
+</div>

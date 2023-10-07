@@ -1,0 +1,64 @@
+---
+import { cn } from "@/lib/utils";
+import { Image } from "astro:assets";
+
+interface Props {
+    image: ImageMetadata;
+    imageTablet: ImageMetadata;
+    imageDesktop: ImageMetadata;
+    title: string;
+    p1: string;
+    p2: string;
+
+    reverse?: boolean;
+}
+
+const {
+    image,
+    imageTablet,
+    imageDesktop,
+    title,
+    p1,
+    p2,
+    reverse
+} = Astro.props;
+
+---
+
+
+
+
+<div class="tablet:grid desktop:flex tablet:rounded-2xl overflow-hidden relative mb-[7.5rem] desktop:mb-40">
+    <Image
+        src={imageDesktop}
+        alt={title}
+        class="w-full hidden desktop:block desktop:h-[640px] desktop:w-[476px] desktop:object-cover"
+    />
+
+    <Image
+        src={imageTablet}
+        alt={title}
+        class="w-full hidden tablet:block desktop:hidden"
+    />
+
+    <Image
+        src={image}
+        alt={title}
+        class="w-full tablet:hidden"
+    />
+
+
+    <div class={cn("w-full px-6 min-h-[34rem] tablet:min-h-[26.125rem] desktop:min-h-[30rem] bg-[#FDF3F0] flex flex-col justify-center items-center  tablet:px-[3.625rem]  gap-6 relative overflow-hidden desktop:items-start desktop:px-24",
+        reverse && "desktop:-order-1"
+    )}>
+
+    <!-- <svg class="absolute inset-0 tablet:-top-64 overflow-visible" xmlns="http://www.w3.org/2000/svg" width="584" height="584"><defs><linearGradient id="a" x1="0%" x2="100%" y1="50%" y2="50%"><stop offset="0%" stop-color="#5D0202" stop-opacity="0"/><stop offset="100%" stop-color="#5D0202" stop-opacity=".498"/></linearGradient></defs><g fill="url(#a)" fill-rule="evenodd" opacity=".06"><circle cx="146" cy="438" r="146" transform="matrix(1 0 0 -1 0 876)"/><circle cx="146" cy="146" r="146" transform="matrix(-1 0 0 1 292 0)"/><circle cx="438" cy="438" r="146" transform="matrix(0 1 1 0 0 0)"/></g></svg> -->
+        <h2 class="heading-lg text-primary-peach">{title}</h2>
+        <p class="body-base  text-center desktop:text-left">
+            {p1}
+        </p>
+        <p class="body-base  text-center desktop:text-left">
+            {p2}
+        </p>
+    </div>
+</div>

@@ -1,0 +1,24 @@
+---
+import Country from "./Country.astro";
+
+---
+
+<section class="px-6 tablet:px-0 flex flex-col gap-12 tablet:gap-20 desktop:flex-row desktop:justify-around desktop:items-center mb-[7.5rem] desktop:mb-40 relative">
+
+    <!-- <svg class="hidden xdesktop:block xdesktop:absolute inset-0 rotate-180 z-[-1] translate-y-[284px] translate-x-[225px]" width="1006" height="594" xmlns="http://www.w3.org/2000/svg"><path d="M297 0h412c164.029 0 297 132.971 297 297S873.029 594 709 594H0V297C0 132.971 132.971 0 297 0z" fill="#F1F3F5" fill-rule="evenodd" opacity=".502"/></svg> -->
+
+    <Country
+        heading="canada"
+        variant="tertiary"
+    />
+    <Country
+        heading="australia"
+        variant="primary"
+    />
+    <Country
+        heading="united kingdom"
+        variant="secondary"
+    />
+    
+
+</section>
