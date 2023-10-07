@@ -1,14 +1,29 @@
 ---
+import {Image}  from "astro:assets";
 import Form from "./Form.astro";
+import IPatternDesktop from "@/assets/contact/desktop/bg-pattern-hero-desktop.svg"
+
+import IPatternMobile from "@/assets/contact/mobile/bg-pattern-hero-contact-mobile.svg"
 ---
 
 
 
 <section class={"bg-primary-peach min-h-[47.75rem] tablet:min-h-[44.375rem] desktop:min-h-[30rem] flex  flex-col gap-6 tablet:gap-[2.5rem] justify-center items-center px-6 tablet:px-[3.625rem] tablet:items-start  tablet:rounded-[1rem] desktop:flex-row desktop:items-center desktop:gap-24 desktop:px-24  relative overflow-hidden mb-[7.5rem] tablet:mb-40"}>
-    <!-- <svg class="overflow-visible absolute right-[31.25rem] top-0 z-0 tablet:right-2 tablet:-top-[60%]" width="876" height="584" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient x1="0%" y1="50%" x2="100%" y2="50%" id="a"><stop stop-color="#5D0202" stop-opacity="0" offset="0%"/><stop stop-color="#5D0202" stop-opacity=".498" offset="100%"/></linearGradient></defs><g transform="matrix(1 0 0 -1 0 584)" fill="url(#a)" fill-rule="evenodd" opacity=".309"><circle transform="matrix(0 -1 -1 0 1168 1168)" cx="730" cy="438" r="146"/><circle transform="matrix(-1 0 0 1 876 0)" cx="438" cy="438" r="146"/><circle transform="matrix(0 1 1 0 -292 292)" cx="146" cy="438" r="146"/><circle transform="matrix(0 -1 -1 0 876 876)" cx="730" cy="146" r="146"/><circle transform="matrix(-1 0 0 1 876 0)" cx="438" cy="146" r="146"/></g></svg> -->
 
+    <svg class="tablet:hidden absolute top-0 -left-[5.5rem] overflow-visible" width="876" height="990" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient x1="0%" y1="50%" x2="100%" y2="50%" id="a"><stop stop-color="#5D0202" stop-opacity="0" offset="0%"/><stop stop-color="#5D0202" stop-opacity=".498" offset="100%"/></linearGradient></defs><g transform="matrix(1 0 0 -1 0 990)" fill="none" fill-rule="evenodd" opacity=".309"><circle transform="scale(-1 1) rotate(-90 0 1573.642)" cx="730" cy="843.642" r="146"/><circle fill="url(#a)" transform="matrix(-1 0 0 1 876 0)" cx="438" cy="843.642" r="146"/><circle fill="url(#a)" transform="scale(-1 1) rotate(90 0 697.642)" cx="146" cy="843.642" r="146"/><circle transform="scale(-1 1) rotate(-90 0 876.358)" cx="730" cy="146.358" r="146"/><circle transform="matrix(-1 0 0 1 876 0)" cx="438" cy="146.358" r="146"/></g></svg>
+    
+
+    <Image
+        src={IPatternDesktop}
+        class=" absolute -top-[5.5em] -left-[7.5rem] hidden tablet:block desktop:left-0 desktop:top-[-10rem]"
+        alt="pattern"
+    />
+
+    <!-- <svg class="hidden tablet:block overflow-visible absolute z-[-1]" width="640" height="640" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient x1="0%" y1="50%" x2="100%" y2="50%" id="a"><stop stop-color="#5D0202" stop-opacity="0" offset="0%"/><stop stop-color="#5D0202" stop-opacity=".498" offset="100%"/></linearGradient></defs><circle fill="url(#a)" transform="matrix(0 1 1 0 0 0)" cx="320" cy="320" r="320" fill-rule="evenodd" opacity=".309"/></svg> -->
 
 <div class="flex flex-col items-center gap-6 tablet:gap-8 tablet:items-start desktop:max-w-[27.875rem]">
+
+
     <h1 class="heading-lg text-primary-white z-[1]">Contact Us</h1>
     <p class="text-center tablet:text-left text-[15px]/[25px] z-[1] tablet:body-base text-white ">Ready to take it to the next level? Let’s talk about your project or idea and find out how we can help your business grow. If you are looking for unique digital experiences that’s relatable to your users, drop us a line.</p>
 </div>
